@@ -6,13 +6,15 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
+import PartialLogo from '@/assets/img/partial-react-logo.png'; // ✅ Import con alias
+
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={PartialLogo} // ✅ Sin require
           style={styles.reactLogo}
         />
       }>
